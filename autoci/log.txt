@@ -1,0 +1,13 @@
+NF LTE5270-A-b: Extends MAX_UE_CATEGORY value from 20 to 26
+DESCRIPTION : Extends MAX_UE_CATEGORY value from 20 to 26 to support R15 UE categories.
+
+ACCEPTED_BY_OAM: no impact
+ACCEPTED_BY_LTEL2: ok(nalini.nalluri@nokia.com)
+ACCEPTED_BY_MAC_PS: no impact
+ACCEPTED_BY_TDD_MAC_PS: ok(shuangping.liao@nokia-sbell.com)
+ACCEPTED_BY_FDD_MAC_PS: ok(stefan.siekanka@nokia.com)
+ACCEPTED_BY_CPLANE: no impact(qihua.wang@nokia-sbell.com)
+ACCEPTED_BY_PHY_RX: no impact
+ACCEPTED_BY_PHY_TX: no impact
+ACCEPTED_BY_BTSSM: no impact
+ACCEPTED_BY_TRS: no impact
