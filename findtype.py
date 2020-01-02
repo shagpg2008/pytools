@@ -15,9 +15,9 @@ _line_comment1 = re.compile(r'//.*')
 _line_comment2 = re.compile(r'/\*.*\*/')
 _lines_comment_start = re.compile(r'/\*.*')
 _lines_comment_stop  = re.compile(r'.*\*/')
-_matched_file = re.compile('\.(h|hpp)$');
-_matched_xml_file = re.compile('\.xml$');
-_path_root = os.path.dirname(os.path.realpath(__file__))
+_matched_file = re.compile('\.(h|hpp)$')
+_matched_xml_file = re.compile('\.xml$')
+_path_root = os.getcwd()
 
 def getStructRe(key):
 	return re.compile(r'(struct|class|union)[\t ]+([\w_]+)[\t ]*\{[\t ;:\[\]\(\)\w_]*\b%s\b[\t ;\[\]\(\)\w:]+\}[\t \w_\(\)]*;'%key)
