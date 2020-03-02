@@ -11,12 +11,16 @@ def mvfiles(dir, matched_pattern, replaced_pattern):
 		
 		if file == '.':
 			continue
-		if os.path.isfile(__path):
+		else:
 			new_name = _matched_file.sub(replaced_pattern, file, 1)
-			__dst = os.path.join(dir, new_name)
-			os.rename(__path, __dst);
-		elif os.path.isdir(__path):
-			mvfiles(__path, matched_pattern, replaced_pattern)
+			
+			if new_name != file:
+				__dst = os.path.join(dir, new_name)
+				os.rename(__path, __dst);
+				__path = __dst
+			
+			if os.path.isdir(__path):
+				mvfiles(__path, matched_pattern, replaced_pattern)
 
 if len(sys.argv) != 3:
 	print( './' + os.path.basename(__file__) + '<MATCHED_PATTERN> <REPLACED_PATTERN>')
