@@ -15,7 +15,7 @@ fileList = {}
 def split_num(_str):
 	num = ""
 	index = 0;
-	while _str[index] >= '0' and _str[index] <= '9':
+	while index < len(_str) and _str[index] >= '0' and _str[index] <= '9':
 		num += _str[index]
 		index += 1
 	return (int(num),_str[index:])
@@ -29,7 +29,7 @@ def find_max_num(_path_root):
 	for i in range(0,len(__list)):
 		__path = os.path.join(_path_root,__list[i])
 		
-		if os.path.isfile(__path) and __list[i][0] >= '0' and __list[i][0] <= '9':
+		if __list[i][0] >= '0' and __list[i][0] <= '9':
 			file_name_num = split_num(__list[i])
 			fileList[__list[i]] = file_name_num
 			if(max_num < file_name_num[0]):
